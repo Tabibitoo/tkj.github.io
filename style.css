@@ -351,6 +351,7 @@ footer {
     font-size: 75%;
   }
 }
+
 /* Tablet */
 @media (max-width: 768px) {
   html {
