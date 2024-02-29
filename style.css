@@ -1,0 +1,405 @@
+:root{
+  --bg: #010101;
+  --primary: #FEE715;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: poppins;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navigasi */
+.navigasi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(1,1,3,0.9);
+}
+
+/* Logo */
+.navigasi .nav-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navigasi .nav-logo span {
+  color: var(--primary);
+}
+
+/* Nav */
+.navigasi .nav a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navigasi .nav a:hover {
+  color: var(--primary);
+}
+
+/* Nav Extra */
+.navigasi .nav-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navigasi .nav-extra a:hover {
+  color: var(--primary);
+}
+#menu {
+  display: none;
+}
+
+/* Section-Home Start */
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('home-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1.4rem 7%;
+  font-size: 2.5rem;
+  position: relative;
+}
+.home::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg,rgba(1,1,3,1) 8%, rgba(255,255,255,0) 50% ) ;
+}
+.home h1 {
+  line-height: 4rem;
+}
+.home h1:nth-child(2) {
+  color: var(--primary);
+}
+.home .paragraf {
+  width: 70vw;
+  margin: 1rem 0;
+  line-height: 2.5rem;
+}
+.home .sosial-media a {
+  color: #fff;
+  margin: 1.5rem;
+}
+.home .sosial-media a:hover {
+  color: var(--primary);
+}
+
+/* Teacher */
+.teacher {
+  padding-bottom: 3rem;
+}
+.teacher>h1 {
+  font-size: 3rem;
+  padding: 8rem 7% 3rem;
+  text-align: center;
+  color: var(--primary);
+}
+.teacher .container {
+  display: flex;
+  margin: 2rem 0 0 0;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.teacher .container .teacher1 {
+  display: flex;
+  width: 45%;
+  margin: 2rem;
+  padding: 1rem;
+  position: relative;
+  background-color: var(--bg);
+}
+.teacher .container .teacher1::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+}
+.teacher .container .teacher1::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+  filter: blur(1.5rem);
+}
+.teacher .container .teacher1::before,
+.teacher .container .teacher1::after {
+  background:linear-gradient(235deg,#0101, var(--primary), #1d1e1f);
+}
+.teacher .container .teacher1 img {
+  flex: 1;
+  object-fit: cover;
+  width: 40%;
+  border-radius: 2rem;
+}
+.teacher .container .teacher1 div {
+   flex: 2;
+   padding: 5%;
+ }
+ .teacher .container .teacher1 div h1 {
+  display: inline;
+  font-size: 2rem;
+  padding: 0;
+}
+.teacher .container .teacher1 div p {
+  font-size: 1.8rem;
+  padding-top: 0.5rem;
+}
+.teacher .container .teacher1 div span {
+  color: var(--primary);
+}
+
+/*Student*/
+.student {
+  background-color: var(--primary);
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.student h1 {
+  font-size: 3rem;
+  padding: 8rem 7% 3rem;
+  text-align: center;
+  width: 100vw;
+  color: var(--bg);
+  margin: 0;
+}
+.student .container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: var(--bg);
+  z-index: 1;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+.student .container h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary);
+  width: 100%;
+  font-weight: bold;
+  background-color: var(--bg);
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+.student .container .student1 img{
+  width: 70%;
+  margin: 1rem auto;
+  border-radius: 50%;
+}
+.student .container .student1 h3{
+  font-size: 1.8rem;
+  text-align: center;
+}
+.student .container .student1 blockquote {
+  font-size: 1.2rem;
+  width: 100;
+  text-align: center;
+}
+.student .container .student1 {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--primary);
+  margin: 1rem ;
+  height: 25rem;
+  position: relative;
+}
+.student .container .student1::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+}
+.student .container .student1::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+  filter: blur(2rem);
+}
+.student .container .student1::before,
+.student .container .student1::after {
+ background:linear-gradient(48deg,#1d1e1f, var(--primary), #1d1e1f);
+}
+
+/*Memory*/
+.memory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 3rem;
+}
+.memory h1 {
+  font-size: 3rem;
+  padding: 8rem 7% 1rem;
+  width: 100%;
+  text-align: center;
+  color: var(--primary);
+}
+.memory .memory-satu {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 1.5rem 1.5rem;
+  padding: 0.3rem;
+  background-color: white;
+  position: relative;
+}
+.memory .memory-satu img {
+  width: 100%;
+}
+.memory .memory-satu p {
+  font-size: 1rem;
+  color: var(--bg);
+}
+.memory .memory-satu::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+}
+.memory .memory-satu::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background-color: #fff;
+  z-index: -1;
+  filter: blur(1.5rem);
+}
+
+.memory .memory-satu::before,
+.memory .memory-satu::after {
+  background:linear-gradient(345deg,#fff, var(--bg), #fff);
+}
+
+/*footer*/
+footer {
+  color: var(--bg);
+  background-color: var(--primary);
+  padding: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+/* Responsive */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navigasi .nav {
+    position: absolute;
+    background-color: var(--primary);
+    top: 100%;
+    right: -100%;
+    width: 50%;
+  }
+}
+  .navigasi .nav.active {
+    right: 0;
+    transition: 0.3s;
+  }
+  .navigasi .nav a {
+    color: var(--bg);
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .navigasi .nav a:hover {
+    background-color: var(--bg);
+    color: var(--primary);
+  }
+  
+  .teacher .container .teacher1 {
+  width: 100vw;
+  margin: 2rem;
+  padding: 1rem;
+}
+.student .container .student1 {
+  width: 40%;
+  margin: 0.5rem;
+}
+
+.memory .memory-satu {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
